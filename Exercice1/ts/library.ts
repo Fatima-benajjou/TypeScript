@@ -8,7 +8,7 @@ export class Library {
     }
 
     removeBook(title: string) :void{
-        let index: number = this.books.findIndex((book) => book.title == title)
+        let index: number = this.books.findIndex((book) => book.title === title)
         this.books.splice(index,1)
     }
 
@@ -21,7 +21,7 @@ export class Library {
     }
 
     getBooksByAuthor(authorName: string) : Book [] {
-        return this.books.filter(book => book.author.name == authorName)
+        return this.books.filter(book => book.author.name === authorName)
     }
 
 }
