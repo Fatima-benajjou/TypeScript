@@ -11,7 +11,7 @@ export class OrderManager {
         return this.orders.find(order =>order.id === id)
     }
 
-    updateOrderStatus ( id: number, status : 'en attente' | 'expédiée' | 'livrée') : void {
+    updateOrderStatus ( id: number, status : "en attente" | 'expédiée' | 'livrée') : void {
         const order = this.getOrderById(id)
         if (order) {
             order.status = status;

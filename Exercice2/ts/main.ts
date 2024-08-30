@@ -3,7 +3,7 @@ import { Order } from "./order.js";
 import { OrderItem } from "./orderItem.js";
 import { Product } from "./product.js";
 
-    let orderIdCounter = 0;
+    let orderIdCounter = 1;
 
     function createOrder(customer: Customer, items: OrderItem[]): Order {
       const newOrder: Order = {

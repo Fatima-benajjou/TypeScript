@@ -1,4 +1,4 @@
-let orderIdCounter = 0;
+let orderIdCounter = 1;
 function createOrder(customer, items) {
     const newOrder = {
         id: orderIdCounter++,
