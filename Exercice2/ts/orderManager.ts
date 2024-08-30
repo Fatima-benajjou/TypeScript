@@ -7,11 +7,11 @@ export class OrderManager {
         this.orders.push (order);
     }
 
-    getOrderById (id: string) : Order | undefined {
+    getOrderById (id: number) : Order | undefined {
         return this.orders.find(order =>order.id === id)
     }
 
-    updateOrderStatus ( id: string, status : 'en attente' | 'expédiée' | 'livrée') : void {
+    updateOrderStatus ( id: number, status : 'en attente' | 'expédiée' | 'livrée') : void {
         const order = this.getOrderById(id)
         if (order) {
             order.status = status;
@@ -22,7 +22,7 @@ export class OrderManager {
         return this.orders.filter(order => order.status === status);
     }
 
-    removeOrder(id : string) :void {
+    removeOrder(id : number) :void {
         this.orders = this.orders.filter(order => order.id !== id);
     }
 

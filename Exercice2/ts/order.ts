@@ -2,7 +2,7 @@ import { Customer } from "./customer.js";
 import { OrderItem } from "./orderItem.js";
 
 export interface Order {
-    id: string;
+    id: number;
     customer: Customer;
     items: OrderItem [];
     status: 'en attente' | 'expédiée' | 'livrée';

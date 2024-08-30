@@ -3,11 +3,11 @@ import { Order } from "./order.js";
 import { OrderItem } from "./orderItem.js";
 import { Product } from "./product.js";
 
-    let orderIdCounter = 1;
+    let orderIdCounter = 0;
 
     function createOrder(customer: Customer, items: OrderItem[]): Order {
       const newOrder: Order = {
-        id: orderIdCounter.toString(),
+        id: orderIdCounter++,
         customer,
         items,
         status: "en attente"
@@ -37,12 +37,16 @@ console.log(product2)
 
 const order1 = createOrder(customer1, [{ product: product1,quantity:6 }, {product: product2,quantity: 2}]);
 const order2 = createOrder(customer2, [{ product: product2,quantity:2 }]);
+const order3 = createOrder(customer2, [{ product: product2,quantity:5 }]);
 
 console.log (order1)
 console.log (order2)
+console.log (order3)
 
 const total1 = calculateTotal(order1)
 const total2 = calculateTotal(order2)
 
 console.log(total1)
 console.log(total2)
+
+
